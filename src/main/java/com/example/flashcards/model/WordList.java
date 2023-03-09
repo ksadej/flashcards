@@ -15,9 +15,12 @@ import lombok.NoArgsConstructor;
 public class WordList {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "WORD_ID")
     private Long id;
     @Column(name = "WORD")
     private String word;
+
+    @Column(name = "WORD_TRANSLATION")
+    private String word_translation;
 }
